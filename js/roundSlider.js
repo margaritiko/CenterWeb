@@ -554,6 +554,8 @@ $.fn.circleType = function(options) {
             return self;
         };
 
+        this.isFirstTime = true
+
         /**
          * @method _findShortestPath
          * @private
@@ -621,6 +623,7 @@ $.fn.circleType = function(options) {
          * @chainable
          * @param {Number} [index] The slide to move to.
          */
+
         this.move = function(index) {
             var slideIndex = Math.max(0, isNaN(index) ? self.slideCurrent : index);
 
@@ -632,13 +635,25 @@ $.fn.circleType = function(options) {
                 angleDelta = _findShortestPath(angleDestination, self.angleCurrent)[0],
                 angleStep = angleDelta > 0 ? -2 : 2;
 
+            if (self.slideCurrent == slideIndex && !isFirstTime) {
+                showPageWithNumber(slideIndex)
+            }
+
             self.slideCurrent = slideIndex;
             _stepMove(angleStep, angleDelta, 50);
 
             self.start();
 
+            isFirstTime = false
             return self;
         };
+
+        function showPageWithNumber(number) {
+            var _id = "infoBlock" + number.toString();
+            alert(_id);
+            /*var block = document.getElementById(id);
+            block.display = inline*/
+        }
 
         /**
          * @method _sanitizeAngle

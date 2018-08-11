@@ -50,8 +50,8 @@ button:focus {
 }
 
 #divHIW {
-    width: 100%;
-    background-color: #f7c92f;
     position: absolute;
     margin-top: 75%;
+    width: 100%;
+    background-color: #f7c92f;
 }
