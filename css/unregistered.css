@@ -1,0 +1,57 @@
+* {
+    font-family: Helvetica;
+    font-color: #2D1E44;
+}
+
+.enter {
+    z-index: 20;
+    background-color: transparent;
+    border: none;
+    width: 10%;
+    text-decoration: none;
+    position: absolute;
+    margin-left: 47%;
+    margin-top: 2%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button:focus {
+    outline: 0;
+}
+
+#mainBlock {
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+}
+
+.container {
+    position: relative;
+    max-width: 1920px;
+    max-height: 1080px;
+    min-width: 1100px;
+    min-height: 568px;
+}
+
+.container button:hover {
+    outline-color: #2D1E44;
+    color: white;
+    overflow: auto;
+}
+
+#howItWas {
+    font-size: 64px;
+    z-index: 500;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    color: #2D1E44;
+}
+
+#divHIW {
+    width: 100%;
+    background-color: #f7c92f;
+    position: absolute;
+    margin-top: 75%;
+}
