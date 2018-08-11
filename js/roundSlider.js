@@ -554,7 +554,7 @@ $.fn.circleType = function(options) {
             return self;
         };
 
-        this.isFirstTime = true
+        this.counterOfTapsOnSlider = 0
 
         /**
          * @method _findShortestPath
@@ -624,6 +624,10 @@ $.fn.circleType = function(options) {
          * @param {Number} [index] The slide to move to.
          */
 
+        function numberOfSection() {
+            return self.slideCurrent;
+        }
+
         this.move = function(index) {
             var slideIndex = Math.max(0, isNaN(index) ? self.slideCurrent : index);
 
@@ -635,7 +639,7 @@ $.fn.circleType = function(options) {
                 angleDelta = _findShortestPath(angleDestination, self.angleCurrent)[0],
                 angleStep = angleDelta > 0 ? -2 : 2;
 
-            if (self.slideCurrent == slideIndex && !isFirstTime) {
+            if (self.slideCurrent == slideIndex && self.counterOfTapsOnSlider >= 1) {
                 showPageWithNumber(slideIndex)
             }
 
@@ -644,15 +648,14 @@ $.fn.circleType = function(options) {
 
             self.start();
 
-            isFirstTime = false
+            self.counterOfTapsOnSlider += 1;
             return self;
         };
 
         function showPageWithNumber(number) {
             var _id = "infoBlock" + number.toString();
-            alert(_id);
-            /*var block = document.getElementById(id);
-            block.display = inline*/
+            var block = document.getElementById(_id);
+            block.style.display = "inline"
         }
 
         /**
@@ -911,7 +914,7 @@ $(document).ready(function() {
         dotsSnap: true,
         radius: radius,
         dotsHide: false,
-        slides: ["Забег", "Иннополис"],
+        slides: ["Лето на Стрелке", "Забег", "Иннополис"],
         interval: false
     });
 
