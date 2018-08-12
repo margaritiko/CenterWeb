@@ -107,8 +107,6 @@ function onWndLoad() {
             j++;
         }
 
-
-
         initX =mouseX;
         e.preventDefault();
         if (Math.abs(transX) >= curSlide.offsetWidth-30) {
@@ -121,11 +119,6 @@ function onWndLoad() {
             attachEvents(sliders[sliders.length - 2]);
             slideMouseUp();
             setTimeout(function () {
-
-
-
-
-
                 slider.insertBefore(prevSlide, slider.firstChild);
 
                 prevSlide.style.transition = 'none';
@@ -133,8 +126,6 @@ function onWndLoad() {
                 slideMouseUp();
 
             },201);
-
-
 
             return;
         }

@@ -653,9 +653,10 @@ $.fn.circleType = function(options) {
         };
 
         function showPageWithNumber(number) {
-            var _id = "infoBlock" + number.toString();
+            /*var _id = "infoBlock" + number.toString();
             var block = document.getElementById(_id);
-            block.style.display = "inline"
+            block.style.display = "inline"*/
+            makeChange()
         }
 
         /**
