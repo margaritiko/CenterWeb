@@ -65,6 +65,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  min-width: 900px;
 }
 .modal__content {
   opacity: 0;
@@ -75,6 +77,7 @@ body {
   transition: opacity 0.2s, transform 0.8s cubic-bezier(0.09, 0.52, 0.25, 1), -webkit-transform 0.8s cubic-bezier(0.09, 0.52, 0.25, 1);
   text-align: center;
   display: flex;
+  position: absolute;
   align-items: center;
   flex-direction: column;
   padding: 1em;
@@ -82,10 +85,17 @@ body {
 .modal h1 {
   text-transform: uppercase;
   letter-spacing: 0.4em;
+  max-width: 70%;
 }
 .modal p {
-  max-width: 25em;
-  line-height: 1.9;
+  font-family: "Helvetica Neue";
+  color: #2D1E44;
+  max-width: 70%;
+  line-height: 1;
+  font-weight: bold;
+  background: white;
+  margin: 0;
+  padding: 30px;
 }
 
 .open .modal__content {

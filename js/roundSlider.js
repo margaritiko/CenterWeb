@@ -656,6 +656,7 @@ $.fn.circleType = function(options) {
             /*var _id = "infoBlock" + number.toString();
             var block = document.getElementById(_id);
             block.style.display = "inline"*/
+            changeContext(number)
             makeChange()
         }
 
@@ -915,7 +916,7 @@ $(document).ready(function() {
         dotsSnap: true,
         radius: radius,
         dotsHide: false,
-        slides: ["Лето на Стрелке", "Забег", "Иннополис"],
+        slides: ["Лето на Стрелке", "Забег", "Иннополис", "Шоу", "Фотовелоквест", "Мастер-класс", "«Европа плюс»", "Теннис"],
         interval: false
     });
 

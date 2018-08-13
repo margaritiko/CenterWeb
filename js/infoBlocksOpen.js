@@ -62,6 +62,7 @@ document.getElementById('_body').style.backgroundColor = "#ffffff";
     }
 });*/
 
+
 anim.addEventListener("complete", function() {
     if (afterClick == true && anim.playDirection == 1) {
         makeChange()
@@ -70,8 +71,9 @@ anim.addEventListener("complete", function() {
         afterClick = false
         animContainer.style.display = "none";
         document.getElementById('_body').style.backgroundColor = "#ffffff";
-        down();
         body.style.overflow = "auto"
+        document.getElementById('firstContainer').style.display = ""
+        down();
     }
 });
 
@@ -105,6 +107,13 @@ function down() {
     return false;
 }
 
+function changeContext(number) {
+    var hib = document.getElementById('HIB');
+    var pib = document.getElementById('PIB');
+    hib.innerText = headerContext[number]
+    pib.innerText = paragraphContext[number]
+}
+
 function makeChange() {
     if (anim.playDirection == -1) {
         up();
@@ -118,6 +127,7 @@ function makeChange() {
         body.classList.add("completed");
 
         document.getElementById('_body').style.backgroundColor = "#00a3da";
+        document.getElementById('firstContainer').style.display = "none"
         animContainer.style.display = "inline";
         body.style.overflow = "hidden"
     }
@@ -127,6 +137,7 @@ function makeChange() {
         // The modal is open, which triggers the content transitions
         body.classList.remove("completed");
         body.classList.remove("open");
+
 
     }
 }
