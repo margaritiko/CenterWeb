@@ -27,3 +27,11 @@
     z-index: 20;
     position: absolute;
 }
+
+.container {
+    position: relative;
+    max-width: 1220px;
+    max-height: 1080px;
+    min-width: 1200px;
+    min-height: 568px;
+}
