@@ -45,8 +45,8 @@ img {
 .polaroid::before {
     content: '';
     position: absolute;
-    bottom: 82%;
-    height: 17%;
+    bottom: 72%;
+    height: 35%;
     width: .2em;
     margin-left: 16%;
     background-color: #2D1E44;
@@ -55,8 +55,8 @@ img {
 .polaroid::after {
     content: '';
     position: absolute;
-    bottom: 82%;
-    height: 17%;
+    bottom: 72%;
+    height: 35%;
     width: .2em;
     margin-left: 16%;
     background-color: #2D1E44;

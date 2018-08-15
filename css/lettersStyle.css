@@ -48,6 +48,7 @@ span:hover::after {
 
 span {
     margin-left: 0.300em;
+    margin-top: 20%;
 }
 
 p {
