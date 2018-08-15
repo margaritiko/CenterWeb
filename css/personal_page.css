@@ -1,0 +1,25 @@
+#back
+{
+    z-index: 10;
+    margin-top: 0%;
+    margin-left: 25%;
+    width: 90%;
+    position: absolute;
+    overflow: auto;
+}
+#exit
+{
+    background-color:transparent;border-color: transparent; position: absolute;z-index:60;margin-top: 18%;margin-left: 87%;height: 65px; width: 60px
+}
+#container
+{
+    position: absolute;
+    max-width: 1950px;
+    min-width: 1300px;
+    max-height: 1080px;
+    min-width: 900px;
+}
+button:focus
+{
+    outline: 0;
+}

@@ -27,3 +27,19 @@
     z-index: 20;
     position: absolute;
 }
+.container
+{
+    max-width: 1920px;
+    max-height: 1080px;
+    min-width: 1300px;
+    min-height: 900px;
+}
+button:focus
+{
+    outline: 0;
+    color: #F7C92F;
+}
+.buttonText:hover
+{
+    color: #F7C92F;
+}
