@@ -39,7 +39,14 @@ button:focus
     outline: 0;
     color: #F7C92F;
 }
-.buttonText:hover
-{
+.buttonText:hover {
     color: #F7C92F;
+}
+
+.container {
+    position: relative;
+    max-width: 1220px;
+    max-height: 1080px;
+    min-width: 1200px;
+    min-height: 568px;
 }

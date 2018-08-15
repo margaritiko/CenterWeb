@@ -1,0 +1,137 @@
+html {
+    background-size: cover;
+    height: 100%;
+}
+
+body {
+    max-width: 40em;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+.polaroid {
+    position: absolute;
+
+    width: 50%;
+    padding-bottom: 30%;
+    max-width: 20em;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-color: white;
+    border-width: 0em 0em 0em;
+    margin-top: 25%;
+    /*box-shadow: 0 0 1em #00A3DA, 0 0 25em white, 0 0 30em #F7C92F, 0 0 40em #2D1E44;*/
+    animation: swing 3.5s ease-in-out forwards infinite;
+    transform-origin: 50% -10em;
+}
+#first {
+    margin-left: -4%;
+    animation: swing 3.5s ease-in-out forwards infinite;
+}
+
+#second {
+    margin-left: 6%;
+    animation: swing2 3.5s ease-in-out forwards infinite;
+}
+
+#third {
+    margin-left: 16%;
+    animation: swing3 3.5s ease-in-out forwards infinite;
+}
+
+.polaroid::before {
+    content: '';
+    position: absolute;
+    bottom: 82%;
+    height: 17%;
+    width: .2em;
+    margin-left: 16%;
+    background-color: #2D1E44;
+}
+
+.polaroid::after {
+    content: '';
+    position: absolute;
+    bottom: 82%;
+    height: 17%;
+    width: .2em;
+    margin-left: 16%;
+    background-color: #2D1E44;
+}
+
+.polaroid::before {
+    transform: skew(3deg);
+    left: .5em;
+}
+
+.polaroid::after {
+    transform: skew(-3deg);
+    left: .5em;
+}
+
+@keyframes swing {
+    0% {
+        transform: translateX(-50%) rotate(2deg)
+    }
+    50% {
+        transform: translateX(-50%) rotate(-2deg) skewX(5deg) skewY(-2deg) scale(1.1)
+    }
+    100% {
+        transform: translateX(-50%) rotate(2deg)
+    }
+}
+@keyframes swing2 {
+    0% {
+        transform: translateX(-50%) rotate(-5deg)
+    }
+    50% {
+        transform: translateX(-50%) rotate(0deg) skewX(-5deg) skewY(2deg) scale(1.1)
+    }
+    100% {
+        transform: translateX(-50%) rotate(-5deg)
+    }
+}
+@keyframes swing3 {
+    0% {
+        transform: translateX(-50%) rotate(3deg)
+    }
+    50% {
+        transform: translateX(-50%) rotate(-3deg) skewX(5deg) skewY(-6deg) scale(1.1)
+    }
+    100% {
+        transform: translateX(-50%) rotate(3deg)
+    }
+}
+
+#ops {
+    position: absolute;
+    z-index: 1000;
+    margin-left: -25%;
+    width: 44%;
+    margin-top: 10%;
+}
+
+#backError {
+    position: absolute;
+    width: 90%;
+    margin-left: -45%;
+    margin-top: 5%;
+}
+
+#close {
+    position: absolute;
+    z-index: 60000;
+    margin-top: 13%;
+    margin-left: 37%;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 0px;
+}
+
+#close:focus {
+    outline: none;
+}
